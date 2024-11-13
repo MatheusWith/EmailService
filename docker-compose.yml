@@ -1,0 +1,20 @@
+version: "2.30.2"
+services:
+
+  db:
+    image: postgres
+    ports:
+      - '5433:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: email
+    networks:
+      - app_network
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+volumes:
+  postgres-data:
+networks:
+  app_network:
+    driver: bridge
