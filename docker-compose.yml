@@ -1,10 +1,8 @@
-version: "2.30.2"
 services:
-
-  db:
+  dbemail:
     image: postgres
     ports:
-      - '5433:5432'
+      - '5434:5432'
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
