@@ -26,7 +26,6 @@ public class EmailService {
     @Transactional
     public Email sendEmail(Email email) {
         try{
-            System.out.println(email.getEmailTo());
             email.setSendDateEmail(LocalDateTime.now());
             email.setEmailFrom(emailFrom);
 
